@@ -73,7 +73,7 @@ export default function ScanTable() {
                 setFilterOpen((v) => !v);
                 setColumnOpen(false);
               }}
-              className={`flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border transition-colors
+              className={`flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border transition-colors cursor-pointer
                 ${
                   activeFilterCount > 0
                     ? "border-teal-400 text-teal-600 bg-teal-50 dark:bg-teal-900/20 dark:text-teal-400 dark:border-teal-700"
@@ -110,7 +110,7 @@ export default function ScanTable() {
                 setColumnOpen((v) => !v);
                 setFilterOpen(false);
               }}
-              className="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border transition-colors
+              className="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border transition-colors cursor-pointer
                 border-gray-200 text-gray-600 hover:bg-gray-50
                 dark:border-[#1e2230] dark:text-gray-400 dark:hover:bg-[#1e2230]"
             >
@@ -128,7 +128,7 @@ export default function ScanTable() {
 
           {/* New scan */}
           <button
-            className="flex items-center gap-1.5 px-3 sm:px-4 py-2 text-sm rounded-lg text-white font-medium transition-opacity hover:opacity-90"
+            className="flex items-center gap-1.5 px-3 sm:px-4 py-2 text-sm rounded-lg text-white font-medium transition-opacity hover:opacity-90 cursor-pointer"
             style={{ background: "var(--color-teal-btn)" }}
           >
             <Plus size={15} />

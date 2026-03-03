@@ -1,11 +1,11 @@
 import {
   LayoutDashboard,
   FolderOpen,
-  ScanLine,
+  FileChartColumnIncreasing,
   Calendar,
   Bell,
   Settings,
-  HelpCircle,
+  Info,
   ChevronRight,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
@@ -14,14 +14,14 @@ import ThemeToggle from "../ui/ThemeToggle";
 const primaryNav = [
   { label: "Dashboard", icon: LayoutDashboard, to: "/dashboard" },
   { label: "Projects", icon: FolderOpen, to: "/projects" },
-  { label: "Scans", icon: ScanLine, to: "/scans" },
+  { label: "Scans", icon: FileChartColumnIncreasing, to: "/scans" },
   { label: "Schedule", icon: Calendar, to: "/schedule" },
 ];
 
 const secondaryNav = [
   { label: "Notifications", icon: Bell, to: "/notifications" },
   { label: "Settings", icon: Settings, to: "/settings" },
-  { label: "Support", icon: HelpCircle, to: "/support" },
+  { label: "Support", icon: Info, to: "/support" },
 ];
 
 function NavItem({ icon: Icon, label, to, onClick }) {

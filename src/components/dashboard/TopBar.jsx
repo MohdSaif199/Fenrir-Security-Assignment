@@ -35,8 +35,13 @@ export default function TopBar({ onMenuClick }) {
           <span className="text-gray-500 dark:text-gray-400 hidden sm:inline">
             Private Assets
           </span>
-          <span className="text-gray-400 dark:text-gray-600 hidden sm:inline">/</span>
-          <span style={{ color: "var(--color-teal-btn)" }} className="font-medium">
+          <span className="text-gray-400 dark:text-gray-600 hidden sm:inline">
+            /
+          </span>
+          <span
+            style={{ color: "var(--color-teal-btn)" }}
+            className="font-medium"
+          >
             New Scan
           </span>
         </nav>
@@ -47,13 +52,14 @@ export default function TopBar({ onMenuClick }) {
         <button
           className="hidden sm:block px-4 py-2 text-sm font-medium rounded-lg border transition-colors
             border-gray-300 text-gray-700 hover:bg-gray-50
+            cursor-pointer
             dark:border-gray-600 dark:text-gray-200 dark:hover:bg-[#1e2230]"
         >
           Export Report
         </button>
         <button
           className="px-3 sm:px-4 py-2 text-sm font-medium rounded-lg transition-colors
-            bg-red-500 text-white hover:bg-red-600
+            bg-red-500 text-white hover:bg-red-600 cursor-pointer
             dark:bg-transparent dark:border dark:border-red-500 dark:text-red-400 dark:hover:bg-red-500/10"
         >
           Stop Scan
