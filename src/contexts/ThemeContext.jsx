@@ -4,7 +4,7 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(
-    () => localStorage.getItem("aps-theme") || "light"
+    () => localStorage.getItem("aps-theme") || "light",
   );
 
   useEffect(() => {
@@ -17,8 +17,7 @@ export function ThemeProvider({ children }) {
     localStorage.setItem("aps-theme", theme);
   }, [theme]);
 
-  const toggleTheme = () =>
-    setTheme((t) => (t === "light" ? "dark" : "light"));
+  const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"));
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

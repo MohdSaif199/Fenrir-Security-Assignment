@@ -1,4 +1,10 @@
-import { Ban, AlertTriangle, Search, TrendingUp, TrendingDown } from "lucide-react";
+import {
+  Ban,
+  AlertTriangle,
+  Search,
+  TrendingUp,
+  TrendingDown,
+} from "lucide-react";
 
 const config = {
   critical: {
@@ -29,7 +35,7 @@ export default function SeverityCard({ label, value, change, trend, type }) {
 
   return (
     <div
-      className="flex-1 min-w-0 rounded-xl px-5 py-5
+      className="rounded-xl px-5 py-5
         bg-white dark:bg-[#141720]
         border border-gray-100 dark:border-[#1e2230]"
     >

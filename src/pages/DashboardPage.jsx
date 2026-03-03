@@ -1,5 +1,4 @@
 import DashboardLayout from "../components/layout/DashboardLayout";
-import TopBar from "../components/dashboard/TopBar";
 import ScanMetaBar from "../components/dashboard/ScanMetaBar";
 import SeverityCard from "../components/dashboard/SeverityCard";
 import ScanTable from "../components/dashboard/ScanTable";
@@ -8,26 +7,20 @@ import { severityStats } from "../data/mockData";
 export default function DashboardPage() {
   return (
     <DashboardLayout>
-      {/* Top breadcrumb bar */}
-      <TopBar />
+      {/* Meta stats bar */}
+      <ScanMetaBar />
 
-      {/* Scrollable content */}
-      <div className="flex-1 overflow-y-auto">
-        {/* Meta stats bar */}
-        <ScanMetaBar />
-
-        {/* Main content padding */}
-        <div className="p-6 space-y-5">
-          {/* Severity Cards */}
-          <div className="flex gap-4">
-            {severityStats.map((stat) => (
-              <SeverityCard key={stat.type} {...stat} />
-            ))}
-          </div>
-
-          {/* Scan Table */}
-          <ScanTable />
+      {/* Main content */}
+      <div className="p-4 sm:p-6 space-y-4 sm:space-y-5">
+        {/* Severity Cards — responsive grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
+          {severityStats.map((stat) => (
+            <SeverityCard key={stat.type} {...stat} />
+          ))}
         </div>
+
+        {/* Scan Table */}
+        <ScanTable />
       </div>
     </DashboardLayout>
   );
