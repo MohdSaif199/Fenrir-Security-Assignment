@@ -9,7 +9,9 @@ export default function TrustpilotBadge() {
       </div>
       <p className="text-white font-bold text-base">
         Rated 4.5/5.0{" "}
-        <span className="text-white/50 font-normal text-sm">(100k+ reviews)</span>
+        <span className="text-white/50 font-normal text-sm">
+          (100k+ reviews)
+        </span>
       </p>
     </div>
   );

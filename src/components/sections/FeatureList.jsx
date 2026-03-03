@@ -20,7 +20,9 @@ export default function FeatureList() {
                 strokeWidth={2.5}
               />
             </span>
-            <span className="text-white/75 text-sm leading-relaxed">{feature}</span>
+            <span className="text-white/75 text-sm leading-relaxed">
+              {feature}
+            </span>
           </li>
         ))}
       </ul>
