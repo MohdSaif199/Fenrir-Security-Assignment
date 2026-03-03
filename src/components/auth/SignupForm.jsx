@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaApple, FaMeta } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import FormInput from "./FormInput";
 import SocialLoginButton from "./SocialLoginButton";
 
 export default function SignupForm() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -18,6 +20,7 @@ export default function SignupForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/dashboard");
   };
 
   return (
@@ -40,7 +43,6 @@ export default function SignupForm() {
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-3">
-        {/* Name Row */}
         <FormInput
           placeholder="First name*"
           value={form.firstName}
@@ -83,7 +85,7 @@ export default function SignupForm() {
             <a
               href="#"
               className="underline"
-              style={{ color: "var(--color-link)" }}
+              style={{ color: "var(--color-teal-btn)" }}
             >
               Terms &amp; Conditions
             </a>{" "}
@@ -91,21 +93,23 @@ export default function SignupForm() {
             <a
               href="#"
               className="underline"
-              style={{ color: "var(--color-link)" }}
+              style={{ color: "var(--color-teal-btn)" }}
             >
               Privacy Policy
             </a>
           </label>
         </div>
 
+        {/* CTA → navigates to dashboard */}
         <button
           type="submit"
-          className="w-full py-3 rounded-full text-white font-semibold text-sm mt-2 transition-opacity hover:opacity-90"
+          className="w-full py-3 rounded-full text-white font-semibold text-sm mt-2 transition-opacity hover:opacity-90 cursor-pointer"
           style={{ background: "var(--color-teal-btn)" }}
         >
           Create account
         </button>
 
+        {/* Social Login */}
         <div className="flex gap-3 mt-2">
           <SocialLoginButton
             label="Sign up with Apple"

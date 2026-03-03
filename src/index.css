@@ -1,12 +1,28 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode */
+@variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-teal: #14e3c0;
   --color-teal-btn: #0bbfac;
   --color-teal-dark: #0a9e8a;
   --color-bg-dark: #0a0c0b;
   --color-meta-blue: #1877f2;
-  --color-link: rgb(28 102 236);
+  --color-link: #0bbfac;
+
+  /* Dashboard light */
+  --color-sidebar-light: #ffffff;
+  --color-content-light: #f5f6fa;
+  --color-card-light: #ffffff;
+  --color-border-light: #e5e7eb;
+
+  /* Dashboard dark */
+  --color-sidebar-dark: #0f1117;
+  --color-content-dark: #0d0f14;
+  --color-card-dark: #141720;
+  --color-border-dark: #1e2230;
+
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
